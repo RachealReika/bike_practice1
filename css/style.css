@@ -353,3 +353,29 @@ section {
         padding: 15px 0;
     }
 }
+/* スマホ対応 */
+@media (max-width: 768px) {
+
+    /* ナビゲーションの中央寄せ */
+    nav ul {
+        display: flex;
+        justify-content: center; /* アイテムを中央に配置 */
+        text-align: center; /* テキストを中央揃え */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        flex-grow: 1; /* アイテムを均等に広げて中央に寄せる */
+        margin: 0 10px; /* 各アイテムに左右マージンを追加 */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* フォントサイズを小さく調整 */
+        white-space: nowrap; /* 改行を防止 */
+        padding: 10px 20px; /* 上下左右にパディングを追加 */
+    }
+
+    /* その他のスタイルはそのまま */
+}
