@@ -329,3 +329,40 @@ section {
         padding: 0 10px; /* 左右のパディング */
     }
 }
+
+/* スマホ版 商品ページ */
+@media (max-width: 768px) {
+    /* 商品グリッドを2列にする */
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* 商品間の隙間 */
+    }
+
+    .product-item {
+        flex: 1 1 calc(50% - 10px); /* 2列にするための設定 */
+        box-sizing: border-box;
+    }
+
+    /* お知らせセクションのスタイル */
+    #news {
+        display: flex;
+        flex-direction: column; /* 縦並びに設定 */
+        padding: 0 20px; /* 左右の余白を追加 */
+    }
+
+    .news-item {
+        display: flex;
+        flex-direction: column; /* 縦並びにする */
+        padding: 15px; /* 余白を調整 */
+        border-bottom: 1px solid #ccc;
+    }
+
+    .news-item:last-child {
+        border-bottom: none; /* 最後の項目にボーダーを消す */
+    }
+
+    /* 他のスタイルはそのままで調整 */
+}
+
+/* 他のメディアクエリやスタイルはそのまま */
