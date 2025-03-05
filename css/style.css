@@ -383,3 +383,34 @@ section {
         padding: 0 10px; /* 左右のパディング */
     }
 }
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+
+    /* ヘッダーのナビゲーションメニューを縦に並べる */
+    nav ul {
+        display: flex;
+        flex-direction: row; /* 横並びにする */
+        justify-content: center; /* アイテムを中央に配置 */
+        padding: 0;
+        margin: 0;
+        width: 100%; /* 幅を100%に設定 */
+    }
+
+    nav ul li {
+        margin: 10px; /* アイテム間に少しマージンを追加 */
+    }
+
+    /* ナビゲーションリンクに改行防止を追加 */
+    nav ul li a {
+        font-size: 14px; /* 文字サイズを小さくする */
+        white-space: nowrap; /* 改行を防止 */
+    }
+
+    /* 他のスタイルはそのままで、ナビゲーションを中央揃え */
+    nav {
+        display: flex;
+        justify-content: center; /* ナビゲーション全体を中央に配置 */
+        width: 100%;
+    }
+}
