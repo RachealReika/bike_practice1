@@ -275,7 +275,6 @@ section {
     nav ul li a {
         font-size: 14px; /* 文字サイズを小さくする */
         white-space: nowrap; /* 改行を防止 */
-        padding: 10px 20px; /* 左右のパディングを追加 */
     }
 
     /* ストアの写真を横幅に合わせて調整 */
@@ -353,27 +352,34 @@ section {
         padding: 15px 0;
     }
 }
-/* スマホ対応 */
+
+/* タブレット（768px〜1024px）対応 */
+@media (max-width: 1024px) {
+
+    /* 商品グリッドを2列に調整 */
+    .product-item {
+        flex: 1 1 calc(50% - 10px); /* 2列に変更 */
+    }
+
+    /* 商品画像サイズを調整 */
+    .product-item img {
+        max-width: 80%;
+    }
+
+    /* ウェルカムメッセージのフォントサイズ */
+    .welcome-message {
+        font-size: 18px;
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+/* スマホ版のウェルカムメッセージの文字サイズと行間を調整 */
 @media (max-width: 768px) {
-
-    /* ナビゲーションの中央寄せ */
-    nav ul {
-        display: flex;
-        justify-content: center; /* アイテムを中央に配置 */
-        padding: 0;
-        margin: 0;
-        width: 100%;
+    .welcome-message {
+        font-size: 14px; /* 文字サイズを小さく設定 */
+        line-height: 1.4; /* 行間を詰める */
+        width: 90%; /* 幅を調整 */
+        margin: 20px auto; /* 左右中央揃え */
+        padding: 0 10px; /* 左右のパディング */
     }
-
-    nav ul li {
-        margin: 0 15px; /* アイテム間に適度なマージン */
-    }
-
-    nav ul li a {
-        font-size: 14px; /* フォントサイズを小さく調整 */
-        white-space: nowrap; /* 改行を防止 */
-        padding: 10px 20px; /* 上下左右にパディングを追加 */
-    }
-
-    /* その他のスタイルはそのまま */
 }
