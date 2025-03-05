@@ -373,13 +373,18 @@ section {
         margin: 20px auto;
     }
 }
-/* スマホ版のウェルカムメッセージの文字サイズと行間を調整 */
+
+/* 商品グリッドの基本設定 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* デフォルトでPC版では3列 */
+    gap: 20px; /* アイテム間の間隔 */
+}
+
+/* スマホ版（最大幅768px）の場合 */
 @media (max-width: 768px) {
-    .welcome-message {
-        font-size: 14px; /* 文字サイズを小さく設定 */
-        line-height: 1.4; /* 行間を詰める */
-        width: 90%; /* 幅を調整 */
-        margin: 20px auto; /* 左右中央揃え */
-        padding: 0 10px; /* 左右のパディング */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* スマホ版では2列に設定 */
+        gap: 10px; /* アイテム間の間隔を少し小さく設定 */
     }
 }
