@@ -275,6 +275,7 @@ section {
     nav ul li a {
         font-size: 14px; /* 文字サイズを小さくする */
         white-space: nowrap; /* 改行を防止 */
+        padding: 10px 20px; /* 左右のパディングを追加 */
     }
 
     /* ストアの写真を横幅に合わせて調整 */
@@ -350,16 +351,5 @@ section {
     footer {
         text-align: center;
         padding: 15px 0;
-    }
-}
-
-/* スマホ版のウェルカムメッセージの文字サイズと行間を調整 */
-@media (max-width: 768px) {
-    .welcome-message {
-        font-size: 14px; /* 文字サイズを小さく設定 */
-        line-height: 1.4; /* 行間を詰める */
-        width: 90%; /* 幅を調整 */
-        margin: 20px auto; /* 左右中央揃え */
-        padding: 0 10px; /* 左右のパディング */
     }
 }
