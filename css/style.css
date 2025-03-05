@@ -360,15 +360,13 @@ section {
     nav ul {
         display: flex;
         justify-content: center; /* アイテムを中央に配置 */
-        text-align: center; /* テキストを中央揃え */
         padding: 0;
         margin: 0;
         width: 100%;
     }
 
     nav ul li {
-        flex-grow: 1; /* アイテムを均等に広げて中央に寄せる */
-        margin: 0 10px; /* 各アイテムに左右マージンを追加 */
+        margin: 0 15px; /* アイテム間に適度なマージン */
     }
 
     nav ul li a {
